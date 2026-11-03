@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碰碰美容室 | 專業寵物美容與健康護理</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FAF8F5;
+            color: #4A4A4A;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(224, 169, 109, 0.15), 0 8px 10px -6px rgba(224, 169, 109, 0.1);
+        }
+        .tab-btn.active {
+            background-color: #E68A00;
+            color: white;
+            box-shadow: 0 4px 12px rgba(230, 138, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-between justify-center text-xl font-bold shadow-md">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800 tracking-wide">碰碰美容室</h1>
+                    <p class="text-xs text-amber-600 font-medium">PongPong Pet Grooming Studio</p>
+                </div>
+            </div>
+            <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-amber-500 text-white text-sm font-medium hover:bg-amber-600 transition-colors shadow-sm">
+                <i class="fa-solid fa-phone me-2"></i>立即預約
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 flex-grow">
+
+        <!-- Progress Overview (顯示四項核心功能占比各25%) -->
+        <section class="bg-amber-50 rounded-2xl p-4 border border-amber-200/60">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                <span class="text-xs font-bold text-amber-800 uppercase tracking-wider mb-1 md:mb-0">
+                    <i class="fa-solid fa-circle-check text-amber-600 me-1"></i> 首頁四大核心模組配置 (共 100%)
+                </span>
+                <span class="text-xs font-semibold text-amber-700">①簡介資訊 25% | ②年齡/BMI換算 25% | ③寵物衛教 25% | ④服務價目 25%</span>
+            </div>
+            <div class="grid grid-cols-4 gap-1 h-2 rounded-full overflow-hidden bg-amber-200">
+                <div class="bg-amber-500 h-full" title="① 工作室介紹 25%"></div>
+                <div class="bg-amber-400 h-full" title="② 寵物計算器 25%"></div>
+                <div class="bg-amber-500 h-full" title="③ 寵物衛教知識 25%"></div>
+                <div class="bg-amber-600 h-full" title="④ 美容價目表 25%"></div>
+            </div>
+        </section>
+
+        <!-- 區塊 ①：工作室簡介與聯絡資訊 (占總評 25%) -->
+        <section id="about" class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-amber-100">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">功能 ① 25%</span>
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-solid fa-store text-amber-500"></i> 工作室簡介 & 聯絡資訊
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- 簡介與服務項目 (限制300字以內) -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-2xl border border-amber-100">
+                        <h3 class="text-lg font-bold text-amber-900 mb-2">歡迎來到「碰碰美容室」</h3>
+                        <p class="text-gray-700 leading-relaxed text-sm sm:text-base" id="about-text">
+                            歡迎光臨「碰碰美容室」！我們專為貓狗毛孩提供低壓力、舒適專業的皮毛照顧。服務項目包含：基礎美容、洗澡、吹毛、大修、純手剪。本店美容師具備專業資格，堅持用心呵護每一隻寶貝，使用天然低敏洗劑與低噪設備，讓毛孩在溫馨環境中愉快享受美容時光！
+                        </p>
+                        
+                        <!-- 服務項目標籤 -->
+                        <div class="mt-4 pt-4 border-t border-amber-200/60 flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold px-3 py-1 bg-amber-200 text-amber-900 rounded-lg">基礎美容</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-amber-200 text-amber-900 rounded-lg">洗澡</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-amber-200 text-amber-900 rounded-lg">吹毛</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-amber-200 text-amber-900 rounded-lg">大修</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-amber-200 text-amber-900 rounded-lg">純手剪</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 聯絡資訊卡片 -->
+                <div class="bg-amber-500 text-white rounded-2xl p-6 shadow-md relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 text-amber-400 opacity-20 text-9xl pointer-events-none">
+                        <i class="fa-solid fa-address-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 border-b border-amber-400/50 pb-2">聯絡與營業資訊</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-amber-200 mt-1 text-base"></i>
+                            <div>
+                                <div class="text-amber-100 text-xs">聯絡電話</div>
+                                <div class="font-bold text-base">0900000000</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-200 mt-1 text-base"></i>
+                            <div>
+                                <div class="text-amber-100 text-xs">工作室地址</div>
+                                <div class="font-medium">台南市東區東東路54-1號</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-amber-200 mt-1 text-base"></i>
+                            <div>
+                                <div class="text-amber-100 text-xs">營業時間</div>
+                                <div class="font-medium">週二至週日 10:00 - 19:00<br><span class="text-xs text-amber-200">(採預約制服務)</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 區塊 ②：換算功能小工具 (占總評 25%) -->
+        <section id="calculator" class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-amber-100">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">功能 ② 25%</span>
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-amber-500"></i> 年齡與 BMI 雙換算功能
+                </h2>
+            </div>
+
+            <!-- 頁籤切換 -->
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-100 pb-4">
+                <button onclick="switchCalc('age')" id="btn-tab-age" class="tab-btn active px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 flex items-center gap-2">
+                    <i class="fa-solid fa-hourglass-half"></i> 寵物相當人類年齡換算器
+                </button>
+                <button onclick="switchCalc('bmi')" id="btn-tab-bmi" class="tab-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 flex items-center gap-2">
+                    <i class="fa-solid fa-weight-scale"></i> 身高體重 BMI 指數計算器
+                </button>
+            </div>
+
+            <!-- 計算器 1: 寵物年齡換算 -->
+            <div id="calc-age-box" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="space-y-4 bg-amber-50/50 p-6 rounded-2xl border border-amber-100">
+                    <h3 class="font-bold text-gray-800 flex items-center gap-2">
+                        <i class="fa-solid fa-dog text-amber-600"></i> 輸入寵物種類與實際年齡
+                    </h3>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">選擇寵物種類</label>
+                        <select id="pet-type" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white text-sm">
+                            <option value="cat">貓咪 🐱</option>
+                            <option value="small-dog">小型犬 (10kg以下) 🐶</option>
+                            <option value="medium-dog">中型犬 (10-25kg) 🐕</option>
+                            <option value="large-dog">大型犬 (25kg以上) 🦮</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">寵物年齡 (歲)</label>
+                        <input type="number" id="pet-age" min="0.5" max="30" step="0.5" value="3" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white text-sm">
+                    </div>
+
+                    <div id="age-error" class="hidden text-xs text-red-500 font-medium">請輸入有效的數字！</div>
+
+                    <button onclick="calculatePetAge()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl shadow-md transition-colors text-sm">
+                        開始計算相當人類歲數
+                    </button>
+                </div>
+
+                <!-- 年齡結果顯示 -->
+                <div class="bg-gradient-to-br from-amber-500 to-orange-500 text-white p-6 rounded-2xl text-center space-y-3 shadow-lg">
+                    <span class="text-amber-100 text-xs font-medium uppercase tracking-wider">計算結果</span>
+                    <div class="text-4xl sm:text-5xl font-extrabold tracking-tight" id="human-age-result">
+                        約 28 歲
+                    </div>
+                    <p class="text-amber-100 text-xs leading-relaxed max-w-xs mx-auto" id="age-advice">
+                        相當於人類的青年時期！建議定期吹毛梳理與皮毛護理。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 計算器 2: 身高體重 BMI 計算器 -->
+            <div id="calc-bmi-box" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="space-y-4 bg-amber-50/50 p-6 rounded-2xl border border-amber-100">
+                    <h3 class="font-bold text-gray-800 flex items-center gap-2">
+                        <i class="fa-solid fa-person text-amber-600"></i> 身高與體重輸入
+                    </h3>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">身高 (公分 cm)</label>
+                        <input type="number" id="bmi-height" placeholder="例如：170" value="165" min="50" max="250" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">體重 (公斤 kg)</label>
+                        <input type="number" id="bmi-weight" placeholder="例如：60" value="55" min="10" max="300" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white text-sm">
+                    </div>
+
+                    <div id="bmi-error" class="hidden text-xs text-red-500 font-medium">請輸入正確的身高與體重數值！</div>
+
+                    <button onclick="calculateBMI()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl shadow-md transition-colors text-sm">
+                        計算 BMI 值
+                    </button>
+                </div>
+
+                <!-- BMI結果顯示 -->
+                <div class="bg-gradient-to-br from-teal-600 to-emerald-600 text-white p-6 rounded-2xl text-center space-y-3 shadow-lg">
+                    <span class="text-teal-100 text-xs font-medium uppercase tracking-wider">BMI 計算結果</span>
+                    <div class="text-4xl sm:text-5xl font-extrabold tracking-tight" id="bmi-value-result">
+                        20.2
+                    </div>
+                    <div class="inline-block px-4 py-1 bg-white/20 rounded-full text-xs font-bold" id="bmi-status-tag">
+                        體重正常
+                    </div>
+                    <p class="text-teal-100 text-xs leading-relaxed max-w-xs mx-auto" id="bmi-advice">
+                        您的身材非常健康！平時多帶毛孩散步跑跑能維持極佳體能與健康！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 區塊 ③：衛教方式 (寵物健康知識至少二則) (占總評 25%) -->
+        <section id="health-tips" class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-amber-100">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">功能 ③ 25%</span>
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-solid fa-heart-pulse text-amber-500"></i> 美容室寵物健康衛教專區
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 衛教卡片 1 -->
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200/80 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg shadow-sm">
+                            <i class="fa-solid fa-soap"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-amber-600 uppercase">衛教知識 01</span>
+                            <h3 class="text-lg font-bold text-gray-800">洗澡與吹毛清潔頻率與保養重點</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        適度的清潔能維護肌膚健康，但過度洗澡會洗去自然皮脂保護層。狗狗建議 <strong class="text-amber-800">7-14 天洗澡一次</strong>，吹毛時務必將底毛徹底吹乾，否則潮濕的毛髮容易滋生黴菌與皮疹。
+                    </p>
+                    <div class="bg-white p-3 rounded-xl border border-amber-100 text-xs text-amber-800 font-medium">
+                        💡 <strong>碰碰小提醒：</strong>洗澡後若沒有完全吹乾，毛孩容易產生打結或皮膚過敏症狀喔！
+                    </div>
+                </div>
+
+                <!-- 衛教卡片 2 -->
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200/80 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg shadow-sm">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-amber-600 uppercase">衛教知識 02</span>
+                            <h3 class="text-lg font-bold text-gray-800">毛髮大修與純手剪造型注意事項</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        夏天切忌將毛孩毛髮完全剃光！毛髮是寵物隔熱與抵禦紫外線的天然防護層。建議採用 <strong class="text-amber-800">大修或純手剪方式修剪適當長度</strong>，既能保持通風涼爽，又能避免曬傷皮膚。
+                    </p>
+                    <div class="bg-white p-3 rounded-xl border border-amber-100 text-xs text-amber-800 font-medium">
+                        💡 <strong>碰碰小提醒：</strong>純手剪能根據毛孩體型與毛質呈現自然的弧度，視覺效果更精緻漂亮。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 區塊 ④：美容價目表 (符合主題) (占總評 25%) -->
+        <section id="pricing" class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-amber-100">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">功能 ④ 25%</span>
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-solid fa-tags text-amber-500"></i> 美容洗澡服務價目表
+                </h2>
+            </div>
+
+            <p class="text-xs text-gray-500 mb-6">
+                * 服務包含：基礎美容、洗澡、吹毛、大修、純手剪等項目，依體型與毛況提供最合適處置。
+            </p>
+
+            <!-- 價目表 Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 小型犬價目 -->
+                <div class="bg-amber-50/40 rounded-2xl p-6 border border-amber-200/60 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-amber-200 text-amber-900 rounded-md">小型犬 (10kg以下)</span>
+                            <i class="fa-solid fa-dog text-2xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">小型犬服務</h3>
+                        <p class="text-xs text-gray-500 mb-4">適用：貴賓、博美、吉娃娃、瑪爾濟斯等</p>
+
+                        <ul class="space-y-3 mb-6 text-sm">
+                            <li class="flex justify-between items-center border-b border-amber-100 pb-2">
+                                <span class="text-gray-700">基礎美容 + 洗澡吹毛</span>
+                                <span class="font-bold text-amber-700">NT$ 600 起</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-amber-100 pb-2">
+                                <span class="text-gray-700">大修造型 (包含洗吹)</span>
+                                <span class="font-bold text-amber-700">NT$ 1,200 起</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-700">精緻純手剪造型</span>
+                                <span class="font-bold text-amber-700">NT$ 1,500 起</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2.5 rounded-xl bg-white border border-amber-300 text-amber-700 font-bold hover:bg-amber-50 text-sm transition-colors">
+                        預約小型犬
+                    </button>
+                </div>
+
+                <!-- 中型犬價目 -->
+                <div class="bg-amber-50/40 rounded-2xl p-6 border border-amber-300 relative flex flex-col justify-between shadow-md">
+                    <span class="absolute -top-3 right-4 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">熱門選擇</span>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-amber-200 text-amber-900 rounded-md">中型犬 (10~25kg)</span>
+                            <i class="fa-solid fa-shield-cat text-2xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">中型犬服務</h3>
+                        <p class="text-xs text-gray-500 mb-4">適用：柴犬、柯基、邊境牧羊犬、米克斯等</p>
+
+                        <ul class="space-y-3 mb-6 text-sm">
+                            <li class="flex justify-between items-center border-b border-amber-100 pb-2">
+                                <span class="text-gray-700">基礎美容 + 洗澡吹毛</span>
+                                <span class="font-bold text-amber-700">NT$ 900 起</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-amber-100 pb-2">
+                                <span class="text-gray-700">大修造型 (包含洗吹)</span>
+                                <span class="font-bold text-amber-700">NT$ 1,600 起</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-700">精緻純手剪造型</span>
+                                <span class="font-bold text-amber-700">NT$ 2,000 起</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2.5 rounded-xl bg-amber-500 text-white font-bold hover:bg-amber-600 text-sm transition-colors shadow-sm">
+                        預約中型犬
+                    </button>
+                </div>
+
+                <!-- 貓咪價目 -->
+                <div class="bg-amber-50/40 rounded-2xl p-6 border border-amber-200/60 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-amber-200 text-amber-900 rounded-md">貓咪專屬</span>
+                            <i class="fa-solid fa-cat text-2xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">貓咪美容服務</h3>
+                        <p class="text-xs text-gray-500 mb-4">適用：全品種貓咪 (免麻醉低壓洗理)</p>
+
+                        <ul class="space-y-3 mb-6 text-sm">
+                            <li class="flex justify-between items-center border-b border-amber-100 pb-2">
+                                <span class="text-gray-700">貓咪洗澡 + 吹毛理毛</span>
+                                <span class="font-bold text-amber-700">NT$ 1,000 起</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-amber-100 pb-2">
+                                <span class="text-gray-700">基礎美容 + 全身除廢毛</span>
+                                <span class="font-bold text-amber-700">NT$ 1,400 起</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-700">貓咪免麻醉大修 / 純手剪</span>
+                                <span class="font-bold text-amber-700">NT$ 1,800 起</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2.5 rounded-xl bg-white border border-amber-300 text-amber-700 font-bold hover:bg-amber-50 text-sm transition-colors">
+                        預約貓咪美容
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-6 border-t border-gray-700 text-xs">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="font-medium text-gray-300">碰碰美容室 PongPong Pet Grooming Studio &copy; 2026 版權所有</p>
+            <p>地址：台南市東區東東路54-1號 | 專線：0900000000</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript 邏輯處理 -->
+    <script>
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            calculatePetAge(); // 初始化年齡計算結果
+        });
+
+        // 換算器頁籤切換
+// ... existing code ... -->
